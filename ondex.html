@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Special Birthday Quest ✨ — Almira Adelia Risma Althofunnisa</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Quicksand (Rounded Anime UI), Plus Jakarta Sans (Clean Body), Caveat (Polaroid Handwriting) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Quicksand', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+          },
+          colors: {
+            lavender: {
+              50: '#f6f0ff',
+              100: '#ede2ff',
+              200: '#e2d1ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#3b0764',
+            },
+            starlight: {
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* ==========================================================================
+       CUSTOM STYLES & ANIMATIONS (PASTEL LAVENDER & SHOUJO STARLIGHT)
+       ========================================================================== */
+    :root {
+      --bg-gradient: linear-gradient(160deg, #f6f0ff 0%, #ede2ff 50%, #e5d4ff 100%);
+      --glass-bg: rgba(255, 255, 255, 0.76);
+      --glass-border: rgba(216, 180, 254, 0.8);
+      --royal-purple: #3b0764;
+      --deep-violet: #6b21a8;
+      --accent-purple: #a855f7;
+      --star-gold: #f59e0b;
+      --star-cream: #fef3c7;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      background: var(--bg-gradient);
+      color: var(--royal-purple);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Frosted Glassmorphism Card */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1.5px solid var(--glass-border);
+      box-shadow: 0 12px 32px -8px rgba(107, 33, 168, 0.15),
+                  inset 0 1px 1px rgba(255, 255, 255, 0.92);
+    }
+
+    /* Magical Starlight Glow */
+    .magical-glow {
+      box-shadow: 0 0 24px rgba(168, 85, 247, 0.38),
+                  0 0 12px rgba(245, 158, 11, 0.25),
+                  0 8px 20px rgba(107, 33, 168, 0.22);
+    }
+
+    /* Floating Animation */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+    .animate-float {
+      animation: floatSlow 3.6s ease-in-out infinite;
+    }
+
+    /* Candle Flame Flicker */
+    @keyframes flameFlicker {
+      0%, 100% { transform: scale(1) rotate(-2deg); opacity: 0.96; }
+      25% { transform: scale(1.09, 0.94) rotate(2deg); opacity: 1; }
+      50% { transform: scale(0.95, 1.07) rotate(-1deg); opacity: 0.92; }
+      75% { transform: scale(1.05, 0.97) rotate(3deg); opacity: 1; }
+    }
+    .candle-flame {
+      transform-origin: center bottom;
+      animation: flameFlicker 1.05s infinite ease-in-out;
+    }
+    .candle-flame.delay-1 { animation-delay: 0.25s; }
+    .candle-flame.delay-2 { animation-delay: 0.55s; }
+
+    /* Rising Smoke Puff Animation */
+    @keyframes smokeRise {
+      0% { opacity: 0.85; transform: translateY(0) scale(0.6); }
+      100% { opacity: 0; transform: translateY(-30px) scale(1.55); }
+    }
+    .smoke-puff {
+      animation: smokeRise 1.45s ease-out forwards;
+    }
+
+    /* Holographic Gacha Card Shimmer */
+    .holo-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+    }
+    .holo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        115deg,
+        transparent 18%,
+        rgba(255, 255, 255, 0.65) 45%,
+        rgba(254, 243, 199, 0.42) 52%,
+        rgba(216, 180, 254, 0.28) 60%,
+        transparent 82%
+      );
+      transform: translateX(-125%);
+      transition: transform 0.8s ease;
+      pointer-events: none;
+    }
+    .holo-card:hover::after,
+    .holo-card.card-active::after {
+      transform: translateX(125%);
+    }
+    .holo-card:active {
+      transform: scale(0.985);
+    }
+
+    /* Perforated Birthday Voucher Ticket */
+    .voucher-ticket {
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(237, 226, 255, 0.94));
+      border: 1.5px solid #d8b4fe;
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .voucher-ticket::before,
+    .voucher-ticket::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: #ede2ff;
+      border: 1.5px solid #d8b4fe;
+      border-radius: 9999px;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .voucher-ticket::before { left: -11px; }
+    .voucher-ticket::after { right: -11px; }
+
+    /* Claimed Stamp Pop Animation */
+    @keyframes stampSlam {
+      0% { transform: scale(2.2) rotate(-18deg); opacity: 0; }
+      70% { transform: scale(0.92) rotate(-10deg); opacity: 1; }
+      100% { transform: scale(1) rotate(-10deg); opacity: 1; }
+    }
+    .stamp-badge {
+      animation: stampSlam 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    /* Typewriter Blinking Cursor */
+    @keyframes blinkCursor {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor-blink {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background-color: #a855f7;
+      vertical-align: text-bottom;
+      margin-left: 2px;
+      animation: blinkCursor 0.8s infinite;
+    }
+
+    /* Section Reveal Animation */
+    .reveal-stage {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-stage.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen antialiased selection:bg-purple-200 selection:text-purple-950">
+
+  <!-- Ambient Particle & Confetti Canvas (Sakura Petals, Twinkling Stars, Shooting Stars & Confetti) -->
+  <canvas id="particleCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-40"></canvas>
+
+  <!-- Top Floating Controls: Mode Toggle, Firebase Sync Status & Audio Pill -->
+  <div class="fixed top-3 left-3 right-3 z-50 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+    <!-- Left: Mode Toggle & Live Sync Status -->
+    <div class="flex items-center gap-1.5 pointer-events-auto">
+      <button
+        id="modeToggleBtn"
+        type="button"
+        aria-label="Ganti antara Mode Almira dan Mode Edit"
+        class="glass-card flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-display font-bold text-lavender-900 shadow-md hover:bg-white/95 active:scale-95 transition cursor-pointer"
+      >
+        <span id="modeIcon">🎁</span>
+        <span id="modeLabel">Mode Almira</span>
+      </button>
+
+      <div
+        id="syncStatusBadge"
+        class="hidden glass-card items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-display font-bold text-lavender-800 shadow-sm"
+      >
+        <span id="syncDot" class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span id="syncText">Tersimpan di Firebase ✓</span>
+      </div>
+    </div>
+
+    <!-- Right: Music Box Audio Toggle -->
+    <button
+      id="audioToggleBtn"
+      type="button"
+      aria-label="Putar atau matikan musik ulang tahun"
+      class="pointer-events-auto glass-card flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-display font-bold text-lavender-900 shadow-md hover:bg-white/95 active:scale-95 transition cursor-pointer"
+    >
+      <span id="audioIcon" class="text-sm">🔇</span>
+      <span id="audioLabel">Music: Off</span>
+    </button>
+  </div>
+
+  <!-- Permission Error Alert Banner (Shown only in Mode Edit if Firestore Rules block writes) -->
+  <div
+    id="permissionAlertBox"
+    class="hidden fixed top-16 left-3 right-3 max-w-[460px] mx-auto z-50 p-3.5 rounded-2xl bg-rose-50/95 border-2 border-rose-400 text-rose-950 text-xs shadow-xl backdrop-blur-md"
+  >
+    <div class="flex items-start justify-between gap-2">
+      <div>
+        <p class="font-display font-bold text-rose-800 mb-0.5">⚠️ Izin Firestore Ditolak (Permission Denied)</p>
+        <p class="leading-relaxed">
+          Buka Firebase Console → <strong>Firestore Database → Rules</strong>, lalu ubah menjadi
+          <code class="px-1 py-0.5 bg-rose-100 rounded font-mono">allow read, write: if true;</code> dan klik <strong>Publish</strong>.
+        </p>
+      </div>
+      <button
+        id="closePermissionAlertBtn"
+        type="button"
+        class="px-2 py-1 rounded-lg bg-rose-200/80 hover:bg-rose-300 text-rose-900 font-bold text-[11px] cursor-pointer"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Mobile-First Centered Container (Max 480px on Desktop, Full Width on Mobile) -->
+  <main class="relative z-10 w-full max-w-[480px] mx-auto min-h-screen px-4 pb-16 pt-6 flex flex-col">
+
+    <!-- ========================================================================
+         STAGE 1: WELCOME GATE (GERBANG KEJUTAN)
+         ======================================================================== -->
+    <section
+      id="openingGate"
+      class="min-h-[88vh] flex flex-col items-center justify-center text-center transition-all duration-700"
+    >
+      <div class="glass-card w-full rounded-3xl p-7 sm:p-8 relative overflow-hidden">
+        <!-- Decorative Corner Glows -->
+        <div class="absolute -top-6 -left-6 w-24 h-24 bg-purple-300/35 rounded-full blur-xl pointer-events-none"></div>
+        <div class="absolute -bottom-8 -right-8 w-28 h-28 bg-amber-200/45 rounded-full blur-xl pointer-events-none"></div>
+
+        <!-- Shoujo Starlight Tag -->
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-starlight-100/90 border border-starlight-400/70 text-lavender-800 text-xs font-display font-bold tracking-wide mb-5 shadow-sm">
+          <span class="text-starlight-500">✦</span>
+          <span>MAGICAL BIRTHDAY PORTAL</span>
+          <span class="text-starlight-500">✦</span>
+        </div>
+
+        <!-- Animated Magical Gift Box & Starlight Crest SVG -->
+        <div class="w-36 h-36 mx-auto mb-5 animate-float flex items-center justify-center">
+          <svg viewBox="0 0 160 160" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer Magical Halo -->
+            <circle cx="80" cy="82" r="64" stroke="url(#haloGrad)" stroke-width="2.2" stroke-dasharray="6 5" />
+            <circle cx="80" cy="82" r="52" fill="url(#innerGlow)" />
+
+            <!-- Floating Gold Starlight Sparkles -->
+            <path d="M32 36L35 43L42 46L35 49L32 56L29 49L22 46L29 43L32 36Z" fill="#f59e0b" />
+            <path d="M128 32L130.5 38L136.5 40.5L130.5 43L128 49L125.5 43L119.5 40.5L125.5 38L128 32Z" fill="#fbbf24" />
+            <path d="M134 104L136 108.5L140.5 110.5L136 112.5L134 117L132 112.5L127.5 110.5L132 108.5L134 104Z" fill="#a855f7" />
+
+            <!-- Gift Box Base -->
+            <rect x="44" y="74" width="72" height="52" rx="10" fill="url(#boxBodyGrad)" stroke="#6b21a8" stroke-width="2.5" />
+            <!-- Vertical Ribbon on Box -->
+            <rect x="73" y="74" width="14" height="52" fill="#f59e0b" />
+            <rect x="73" y="74" width="14" height="52" stroke="#6b21a8" stroke-width="2" />
+
+            <!-- Gift Box Lid -->
+            <rect x="38" y="58" width="84" height="18" rx="7" fill="url(#boxLidGrad)" stroke="#6b21a8" stroke-width="2.5" />
+            <rect x="73" y="58" width="14" height="18" fill="#f59e0b" stroke="#6b21a8" stroke-width="2" />
+
+            <!-- Cute Ribbon Bow Loops -->
+            <path d="M80 58C68 42 48 44 52 56C55 63 72 60 80 58Z" fill="#fbbf24" stroke="#6b21a8" stroke-width="2.2" />
+            <path d="M80 58C92 42 112 44 108 56C105 63 88 60 80 58Z" fill="#fbbf24" stroke="#6b21a8" stroke-width="2.2" />
+            <!-- Center Star Gem on Bow -->
+            <circle cx="80" cy="57" r="6.5" fill="#fef3c7" stroke="#6b21a8" stroke-width="2" />
+
+            <defs>
+              <linearGradient id="haloGrad" x1="16" y1="18" x2="144" y2="146" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="0.5" stop-color="#f59e0b" />
+                <stop offset="1" stop-color="#d8b4fe" />
+              </linearGradient>
+              <radialGradient id="innerGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80 82) rotate(90) scale(52)">
+                <stop stop-color="#ffffff" stop-opacity="0.92" />
+                <stop offset="1" stop-color="#ede2ff" stop-opacity="0.38" />
+              </radialGradient>
+              <linearGradient id="boxBodyGrad" x1="44" y1="74" x2="116" y2="126" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ede2ff" />
+                <stop offset="1" stop-color="#d8b4fe" />
+              </linearGradient>
+              <linearGradient id="boxLidGrad" x1="38" y1="58" x2="122" y2="76" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f6f0ff" />
+                <stop offset="1" stop-color="#d8b4fe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Headline & Recipient Name -->
+        <h1 class="font-display text-2xl sm:text-3xl font-bold text-lavender-900 leading-tight mb-2">
+          Special Birthday Quest ✨
+        </h1>
+        <p class="text-xs uppercase tracking-widest font-semibold text-lavender-600 mb-1.5">
+          Kado Digital Spesial Untuk
+        </p>
+        <h2 class="font-display text-lg sm:text-xl font-bold text-lavender-800 bg-white/80 border border-lavender-300 rounded-2xl py-2.5 px-4 mb-5 shadow-sm">
+          Almira Adelia Risma Althofunnisa 💜
+        </h2>
+
+        <p class="text-sm text-lavender-800/90 leading-relaxed mb-7 px-1">
+          Ada kejutan kecil bernuansa lavender &amp; starlight yang sudah disiapkan khusus buat merayakan hari ulang tahunmu hari ini~
+        </p>
+
+        <!-- Primary Interactive CTA Button -->
+        <button
+          id="openGiftBtn"
+          type="button"
+          class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-lavender-800 via-lavender-500 to-lavender-800 text-white font-display font-bold text-base sm:text-lg tracking-wide magical-glow hover:brightness-105 active:scale-95 transition flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span>✨ Buka Kado Spesial ✨</span>
+        </button>
+
+        <p class="text-[11px] text-lavender-800/75 mt-3">
+          (Pastikan volume HP menyala biar melodi music box-nya terdengar 🎵)
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         MAIN BIRTHDAY JOURNEY (UNLOCKED AFTER OPENING GATE)
+         ======================================================================== -->
+    <div id="mainJourney" class="hidden flex-col gap-8 pt-10">
+
+      <!-- Welcome Header Banner -->
+      <header class="reveal-stage text-center pt-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-display font-bold text-lavender-800 mb-3">
+          <span class="text-starlight-500">👑</span>
+          <span>HAPPY BIRTHDAY, ALMIRA!</span>
+          <span class="text-starlight-500">👑</span>
+        </div>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-lavender-900 leading-snug">
+          Selamat Ulang Tahun,<br />
+          <span class="bg-gradient-to-r from-lavender-800 via-lavender-500 to-starlight-500 bg-clip-text text-transparent">
+            Almira Sayang! 💜✨
+          </span>
+        </h2>
+        <p class="text-xs sm:text-sm text-lavender-800/85 mt-2 max-w-xs mx-auto">
+          Scroll pelan-pelan ke bawah ya, ikuti setiap tahap kejutan ulang tahunmu~
+        </p>
+      </header>
+
+      <!-- ======================================================================
+           STAGE 2: INTERACTIVE BIRTHDAY CAKE (TIUP LILIN VIRTUAL)
+           ====================================================================== -->
+      <section id="cakeSection" class="reveal-stage glass-card rounded-3xl p-6 text-center relative overflow-hidden">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lavender-100 border border-lavender-300/70 text-lavender-800 text-[11px] font-display font-bold mb-3">
+          <span>STAGE 01</span>
+          <span>•</span>
+          <span>MAKE A WISH 🕯️</span>
+        </div>
+
+        <h3 class="font-display text-xl font-bold text-lavender-900 mb-2">
+          Tiup Lilin Ulang Tahunmu
+        </h3>
+        <p id="cakeInstruction" class="text-xs sm:text-sm text-lavender-800 leading-relaxed mb-4 px-2">
+          Pejamkan mata, buat harapan terbaikmu di usia baru ini, lalu <strong>sentuh api lilinnya</strong> untuk meniup! 🕯️
+        </p>
+
+        <!-- Interactive Pastel Lavender SVG Birthday Cake -->
+        <div
+          id="cakeContainer"
+          role="button"
+          tabindex="0"
+          aria-label="Sentuh kue atau lilin untuk meniup api lilin"
+          class="relative w-64 h-60 mx-auto my-2 select-none cursor-pointer group active:scale-[0.98] transition-transform"
+        >
+          <svg viewBox="0 0 260 240" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Soft Starlight Aura Behind Cake -->
+            <ellipse cx="130" cy="145" rx="102" ry="74" fill="url(#cakeAura)" />
+
+            <!-- Cake Plate -->
+            <ellipse cx="130" cy="212" rx="106" ry="16" fill="#ffffff" stroke="#d8b4fe" stroke-width="2.5" />
+            <ellipse cx="130" cy="209" rx="90" ry="10" fill="#f6f0ff" />
+
+            <!-- Bottom Layer (Pastel Lavender) -->
+            <rect x="46" y="148" width="168" height="58" rx="16" fill="url(#layerBottom)" stroke="#6b21a8" stroke-width="2.5" />
+            <!-- Bottom Layer Cream Scallops -->
+            <path d="M46 164C56 174 68 174 78 164C88 174 100 174 110 164C120 174 132 174 142 164C152 174 164 174 174 164C184 174 198 174 214 164" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" />
+            <!-- Little Gold & Lilac Ornaments -->
+            <circle cx="78" cy="186" r="4" fill="#f59e0b" />
+            <circle cx="130" cy="188" r="4.5" fill="#fef3c7" stroke="#6b21a8" stroke-width="1.5" />
+            <circle cx="182" cy="186" r="4" fill="#f59e0b" />
+
+            <!-- Top Layer (Soft Lilac) -->
+            <rect x="68" y="98" width="124" height="52" rx="14" fill="url(#layerTop)" stroke="#6b21a8" stroke-width="2.5" />
+            <!-- Top Frosting Drips -->
+            <path d="M68 108C68 102 74 98 80 98H180C186 98 192 102 192 108V116C192 121 186 121 184 116C182 111 176 112 174 119C172 126 164 126 162 118C160 111 152 111 150 117C148 123 140 123 138 116C136 110 126 110 124 119C122 127 112 127 110 118C108 111 100 111 98 117C96 123 88 123 86 116C84 111 76 111 74 117C72 122 68 120 68 115V108Z" fill="#ffffff" />
+
+            <!-- Cute Berries & Gold Star Topper -->
+            <circle cx="84" cy="96" r="6" fill="#d8b4fe" stroke="#6b21a8" stroke-width="1.8" />
+            <circle cx="176" cy="96" r="6" fill="#d8b4fe" stroke="#6b21a8" stroke-width="1.8" />
+            <path d="M130 88L132.5 93L138 93.8L134 97.6L135 103L130 100.4L125 103L126 97.6L122 93.8L127.5 93L130 88Z" fill="#fbbf24" stroke="#6b21a8" stroke-width="1.5" />
+
+            <!-- THREE CANDLES -->
+            <!-- Candle 1 (Left) -->
+            <rect x="94" y="64" width="10" height="34" rx="4" fill="#fef3c7" stroke="#6b21a8" stroke-width="2" />
+            <path d="M94 74L104 79M94 84L104 89" stroke="#a855f7" stroke-width="2" />
+
+            <!-- Candle 2 (Center - Main Starlight Candle) -->
+            <rect x="125" y="56" width="10" height="42" rx="4" fill="#ede2ff" stroke="#6b21a8" stroke-width="2" />
+            <path d="M125 68L135 73M125 79L135 84" stroke="#f59e0b" stroke-width="2" />
+
+            <!-- Candle 3 (Right) -->
+            <rect x="156" y="64" width="10" height="34" rx="4" fill="#fef3c7" stroke="#6b21a8" stroke-width="2" />
+            <path d="M156 74L166 79M156 84L166 89" stroke="#a855f7" stroke-width="2" />
+
+            <!-- CANDLE FLAMES GROUP (Hidden when blown out) -->
+            <g id="candleFlamesGroup">
+              <!-- Flame 1 -->
+              <g class="candle-flame">
+                <ellipse cx="99" cy="49" rx="9" ry="13" fill="#fbbf24" fill-opacity="0.38" />
+                <path d="M99 38C99 38 92 47 92 53C92 57 95.2 60 99 60C102.8 60 106 57 106 53C106 47 99 38 99 38Z" fill="#f59e0b" />
+                <path d="M99 44C99 44 95 49.5 95 53C95 55.5 96.8 57.5 99 57.5C101.2 57.5 103 55.5 103 53C103 49.5 99 44 99 44Z" fill="#fef3c7" />
+              </g>
+
+              <!-- Flame 2 -->
+              <g class="candle-flame delay-1">
+                <ellipse cx="130" cy="41" rx="10" ry="14" fill="#fbbf24" fill-opacity="0.42" />
+                <path d="M130 29C130 29 122.5 39 122.5 45C122.5 49.5 125.8 52.5 130 52.5C134.2 52.5 137.5 49.5 137.5 45C137.5 39 130 29 130 29Z" fill="#f59e0b" />
+                <path d="M130 35.5C130 35.5 126 41.5 126 45C126 47.6 127.8 49.8 130 49.8C132.2 49.8 134 47.6 134 45C134 41.5 130 35.5 130 35.5Z" fill="#fef3c7" />
+              </g>
+
+              <!-- Flame 3 -->
+              <g class="candle-flame delay-2">
+                <ellipse cx="161" cy="49" rx="9" ry="13" fill="#fbbf24" fill-opacity="0.38" />
+                <path d="M161 38C161 38 154 47 154 53C154 57 157.2 60 161 60C164.8 60 168 57 168 53C168 47 161 38 161 38Z" fill="#f59e0b" />
+                <path d="M161 44C161 44 157 49.5 157 53C157 55.5 158.8 57.5 161 57.5C163.2 57.5 165 55.5 165 53C165 49.5 161 44 161 44Z" fill="#fef3c7" />
+              </g>
+            </g>
+
+            <!-- RISING SMOKE PUFFS GROUP (Shown when blown out) -->
+            <g id="candleSmokeGroup" class="hidden">
+              <circle cx="99" cy="48" r="5" fill="#cbd5e1" class="smoke-puff" />
+              <circle cx="95" cy="40" r="4" fill="#e2e8f0" class="smoke-puff" />
+              <circle cx="130" cy="40" r="6" fill="#cbd5e1" class="smoke-puff" />
+              <circle cx="134" cy="31" r="4.5" fill="#e2e8f0" class="smoke-puff" />
+              <circle cx="161" cy="48" r="5" fill="#cbd5e1" class="smoke-puff" />
+              <circle cx="158" cy="40" r="4" fill="#e2e8f0" class="smoke-puff" />
+            </g>
+
+            <defs>
+              <radialGradient id="cakeAura" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(130 145) rotate(90) scale(74 102)">
+                <stop stop-color="#ede2ff" stop-opacity="0.9" />
+                <stop offset="1" stop-color="#ede2ff" stop-opacity="0" />
+              </radialGradient>
+              <linearGradient id="layerBottom" x1="46" y1="148" x2="214" y2="206" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ede2ff" />
+                <stop offset="1" stop-color="#d8b4fe" />
+              </linearGradient>
+              <linearGradient id="layerTop" x1="68" y1="98" x2="192" y2="150" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f6f0ff" />
+                <stop offset="1" stop-color="#d8b4fe" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- Tap Hint Pill -->
+          <div id="tapCandleBadge" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-lavender-800 text-white text-xs font-display font-bold shadow-md animate-bounce -mt-2">
+            <span>👆 Sentuh Lilin untuk Meniup</span>
+          </div>
+        </div>
+
+        <!-- Make a Wish Celebration Message (Revealed after blowing candles) -->
+        <div
+          id="wishGrantedBox"
+          class="hidden mt-4 p-4 rounded-2xl bg-gradient-to-r from-lavender-100 via-starlight-100/70 to-lavender-100 border border-lavender-300 text-lavender-900 shadow-inner transition-all"
+        >
+          <p class="font-display font-bold text-sm sm:text-base text-lavender-800 mb-1">
+            Make a wish! ✨ Semoga terkabul ya, Almira! 💜
+          </p>
+          <p class="text-xs sm:text-sm leading-relaxed text-lavender-900">
+            Semoga semua impian, kebahagiaan, &amp; wishlist cosplay impianmu terwujud tahun ini! 🌸
+          </p>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           STAGE 3: COSPLAY & MEMORY CARDS (ANIME GACHA COLLECTIBLE CARDS)
+           ====================================================================== -->
+      <section id="gallerySection" class="reveal-stage flex flex-col gap-4">
+        <div class="text-center px-2">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lavender-100 border border-lavender-300/70 text-lavender-800 text-[11px] font-display font-bold mb-2">
+            <span>STAGE 02</span>
+            <span>•</span>
+            <span>COSPLAY &amp; MEMORY GACHA ✨</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-lavender-900">
+            Koleksi Kartu Spesial Almira
+          </h3>
+          <p id="gallerySubtitle" class="text-xs text-lavender-800/85 mt-1">
+            Sentuh tiap kartu untuk membuka pesan rahasianya 💜
+          </p>
+        </div>
+
+        <!-- CARD 1: SSR • Best Girl -->
+        <article
+          class="memory-card holo-card glass-card rounded-3xl p-4 cursor-pointer"
+          data-card-index="0"
+        >
+          <!-- Card Header: Rarity Badge & Edit Photo Trigger -->
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-starlight-400 via-starlight-100 to-starlight-400 border border-starlight-500 text-lavender-900 text-xs font-display font-bold shadow-sm">
+              <span>★★★★★</span>
+              <span>SSR • Best Girl 💜</span>
+            </span>
+
+            <!-- Photo Upload Trigger (Visible only in Mode Edit) -->
+            <div class="edit-only-control hidden items-center gap-1.5">
+              <label
+                class="photo-upload-label inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lavender-800 hover:bg-lavender-600 text-white text-[11px] font-semibold cursor-pointer shadow-sm transition"
+                title="Ganti ilustrasi dengan foto dari galerimu"
+              >
+                <span>📷 Ganti Foto</span>
+                <input type="file" accept="image/*" class="hidden card-photo-input" />
+              </label>
+            </div>
+          </div>
+
+          <!-- Polaroid Frame Area -->
+          <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-lavender-50 via-lavender-100 to-starlight-100/60 border border-lavender-300/80 flex items-center justify-center">
+            <img
+              src=""
+              alt="Foto Almira Best Girl"
+              class="card-custom-img hidden w-full h-full object-cover"
+            />
+            <!-- Default Cute Anime Magical Tiara & Starlight SVG -->
+            <div class="card-default-art w-full h-full flex flex-col items-center justify-center p-4 text-center">
+              <svg viewBox="0 0 180 130" class="w-36 h-28 drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="90" cy="65" r="50" fill="#ffffff" fill-opacity="0.78" />
+                <path d="M56 76L65 46L80 62L90 38L100 62L115 46L124 76H56Z" fill="url(#crownGrad)" stroke="#6b21a8" stroke-width="2.5" stroke-linejoin="round" />
+                <rect x="54" y="76" width="72" height="10" rx="5" fill="#d8b4fe" stroke="#6b21a8" stroke-width="2.2" />
+                <circle cx="90" cy="64" r="5" fill="#a855f7" />
+                <circle cx="72" cy="68" r="3.5" fill="#f59e0b" />
+                <circle cx="108" cy="68" r="3.5" fill="#f59e0b" />
+                <path d="M40 36L42.5 42L48.5 44.5L42.5 47L40 53L37.5 47L31.5 44.5L37.5 42L40 36Z" fill="#f59e0b" />
+                <path d="M142 34L144 39L149 41L144 43L142 48L140 43L135 41L140 39L142 34Z" fill="#a855f7" />
+                <defs>
+                  <linearGradient id="crownGrad" x1="56" y1="38" x2="124" y2="76" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#fef3c7" />
+                    <stop offset="1" stop-color="#f59e0b" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span class="font-hand text-xl text-lavender-900 mt-1">Main Character Energy ✨</span>
+            </div>
+
+            <div class="card-tap-hint absolute bottom-2.5 right-2.5 px-3 py-1 rounded-full bg-lavender-900/80 text-white text-[11px] font-display font-semibold backdrop-blur-sm">
+              Ketuk kartu 💬
+            </div>
+          </div>
+
+          <!-- Expandable Polaroid Caption (Mode Almira View) -->
+          <div class="card-caption hidden mt-3 pt-3 border-t border-lavender-300/70 text-center px-1">
+            <p class="card-title-display font-hand text-xl text-lavender-800 mb-1">“Always Shining Bright 💜”</p>
+            <p class="card-note-display text-xs sm:text-sm text-lavender-900 leading-relaxed">
+              Buatku, kamu selalu jadi karakter utama paling bersinar. Senyum dan semangatmu selalu sukses bikin hari-hari terasa jauh lebih hangat!
+            </p>
+          </div>
+
+          <!-- Edit Fields (Mode Edit Only) -->
+          <div class="card-edit-panel edit-only-control hidden flex-col gap-2 mt-3 pt-3 border-t border-lavender-300">
+            <label class="text-[11px] font-display font-bold text-lavender-900">Judul Kartu / Karakter:</label>
+            <input
+              type="text"
+              class="card-title-input w-full px-3 py-2 rounded-xl bg-white/95 border border-lavender-300 text-xs font-semibold text-lavender-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+              value="“Always Shining Bright 💜”"
+            />
+            <label class="text-[11px] font-display font-bold text-lavender-900">Catatan Manis:</label>
+            <textarea
+              rows="2"
+              class="card-note-input w-full px-3 py-2 rounded-xl bg-white/95 border border-lavender-300 text-xs text-lavender-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+            >Buatku, kamu selalu jadi karakter utama paling bersinar. Senyum dan semangatmu selalu sukses bikin hari-hari terasa jauh lebih hangat!</textarea>
+            <button
+              type="button"
+              class="save-card-btn self-end px-3.5 py-1.5 rounded-xl bg-lavender-800 hover:bg-lavender-600 text-white text-xs font-display font-bold shadow-sm transition cursor-pointer"
+            >
+              💾 Simpan Kartu
+            </button>
+          </div>
+        </article>
+
+        <!-- CARD 2: UR • Cosplay Queen -->
+        <article
+          class="memory-card holo-card glass-card rounded-3xl p-4 cursor-pointer"
+          data-card-index="1"
+        >
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-lavender-300 via-lavender-100 to-starlight-100 border border-lavender-500 text-lavender-900 text-xs font-display font-bold shadow-sm">
+              <span>✦✦✦</span>
+              <span>UR • Cosplay Queen ✨</span>
+            </span>
+
+            <div class="edit-only-control hidden items-center gap-1.5">
+              <label
+                class="photo-upload-label inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lavender-800 hover:bg-lavender-600 text-white text-[11px] font-semibold cursor-pointer shadow-sm transition"
+                title="Ganti ilustrasi dengan foto cosplay Almira"
+              >
+                <span>📷 Ganti Foto</span>
+                <input type="file" accept="image/*" class="hidden card-photo-input" />
+              </label>
+            </div>
+          </div>
+
+          <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-lavender-100 via-lavender-50 to-lavender-200 border border-lavender-300/80 flex items-center justify-center">
+            <img
+              src=""
+              alt="Foto Cosplay Almira"
+              class="card-custom-img hidden w-full h-full object-cover"
+            />
+            <!-- Default Anime Cosplay Cat-Ears & Camera SVG -->
+            <div class="card-default-art w-full h-full flex flex-col items-center justify-center p-4 text-center">
+              <svg viewBox="0 0 180 130" class="w-36 h-28 drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="90" cy="65" r="50" fill="#ffffff" fill-opacity="0.78" />
+                <path d="M58 84C58 64 72 52 90 52C108 52 122 64 122 84" stroke="#6b21a8" stroke-width="4" stroke-linecap="round" />
+                <path d="M56 64L52 36L76 53Z" fill="#d8b4fe" stroke="#6b21a8" stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M59 59L57 43L71 53Z" fill="#fef3c7" />
+                <path d="M124 64L128 36L104 53Z" fill="#d8b4fe" stroke="#6b21a8" stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M121 59L123 43L109 53Z" fill="#fef3c7" />
+                <circle cx="90" cy="52" r="6" fill="#f59e0b" stroke="#6b21a8" stroke-width="2" />
+                <rect x="72" y="72" width="36" height="24" rx="6" fill="#f6f0ff" stroke="#6b21a8" stroke-width="2.2" />
+                <circle cx="90" cy="84" r="6" fill="#a855f7" stroke="#6b21a8" stroke-width="2" />
+              </svg>
+              <span class="font-hand text-xl text-lavender-900 mt-1">100/100 Cosplay Charm 🌸</span>
+            </div>
+
+            <div class="card-tap-hint absolute bottom-2.5 right-2.5 px-3 py-1 rounded-full bg-lavender-900/80 text-white text-[11px] font-display font-semibold backdrop-blur-sm">
+              Ketuk kartu 💬
+            </div>
+          </div>
+
+          <div class="card-caption hidden mt-3 pt-3 border-t border-lavender-300/70 text-center px-1">
+            <p class="card-title-display font-hand text-xl text-lavender-800 mb-1">“Effort &amp; Passion yang Keren Banget ✨”</p>
+            <p class="card-note-display text-xs sm:text-sm text-lavender-900 leading-relaxed">
+              Selalu kagum lihat totalitas dan kreativitasmu tiap kali cosplay! Karakter apa pun yang kamu perankan selalu kelihatan hidup dan memukau.
+            </p>
+          </div>
+
+          <!-- Edit Fields (Mode Edit Only) -->
+          <div class="card-edit-panel edit-only-control hidden flex-col gap-2 mt-3 pt-3 border-t border-lavender-300">
+            <label class="text-[11px] font-display font-bold text-lavender-900">Judul Kartu / Karakter:</label>
+            <input
+              type="text"
+              class="card-title-input w-full px-3 py-2 rounded-xl bg-white/95 border border-lavender-300 text-xs font-semibold text-lavender-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+              value="“Effort & Passion yang Keren Banget ✨”"
+            />
+            <label class="text-[11px] font-display font-bold text-lavender-900">Catatan Manis:</label>
+            <textarea
+              rows="2"
+              class="card-note-input w-full px-3 py-2 rounded-xl bg-white/95 border border-lavender-300 text-xs text-lavender-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+            >Selalu kagum lihat totalitas dan kreativitasmu tiap kali cosplay! Karakter apa pun yang kamu perankan selalu kelihatan hidup dan memukau.</textarea>
+            <button
+              type="button"
+              class="save-card-btn self-end px-3.5 py-1.5 rounded-xl bg-lavender-800 hover:bg-lavender-600 text-white text-xs font-display font-bold shadow-sm transition cursor-pointer"
+            >
+              💾 Simpan Kartu
+            </button>
+          </div>
+        </article>
+
+        <!-- CARD 3: SR • Sweetest Memory -->
+        <article
+          class="memory-card holo-card glass-card rounded-3xl p-4 cursor-pointer"
+          data-card-index="2"
+        >
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-lavender-100 via-lavender-300 to-lavender-100 border border-lavender-400 text-lavender-900 text-xs font-display font-bold shadow-sm">
+              <span>♥♥♥</span>
+              <span>SR • Sweetest Memory 🌸</span>
+            </span>
+
+            <div class="edit-only-control hidden items-center gap-1.5">
+              <label
+                class="photo-upload-label inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-lavender-800 hover:bg-lavender-600 text-white text-[11px] font-semibold cursor-pointer shadow-sm transition"
+                title="Ganti ilustrasi dengan foto kenangan berdua"
+              >
+                <span>📷 Ganti Foto</span>
+                <input type="file" accept="image/*" class="hidden card-photo-input" />
+              </label>
+            </div>
+          </div>
+
+          <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-lavender-50 via-lavender-200 to-starlight-100/50 border border-lavender-300/80 flex items-center justify-center">
+            <img
+              src=""
+              alt="Foto Kenangan Berdua"
+              class="card-custom-img hidden w-full h-full object-cover"
+            />
+            <!-- Default Starlight Crescent Moon & Twin Hearts SVG -->
+            <div class="card-default-art w-full h-full flex flex-col items-center justify-center p-4 text-center">
+              <svg viewBox="0 0 180 130" class="w-36 h-28 drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="90" cy="65" r="50" fill="#ffffff" fill-opacity="0.78" />
+                <path d="M104 34C88 36 76 50 78 67C80 84 94 96 111 94C99 91 91 80 91 66C91 52 97 41 104 34Z" fill="#fef3c7" stroke="#6b21a8" stroke-width="2" />
+                <path d="M76 66C76 59 66 56 62 63C58 56 48 59 48 66C48 75 62 84 62 84C62 84 76 75 76 66Z" fill="#a855f7" stroke="#6b21a8" stroke-width="2.2" />
+                <path d="M126 70C126 64 118 61 114 67C110 61 102 64 102 70C102 78 114 86 114 86C114 86 126 78 126 70Z" fill="#f59e0b" stroke="#6b21a8" stroke-width="2.2" />
+              </svg>
+              <span class="font-hand text-xl text-lavender-900 mt-1">Our Favorite Moments Together 💜</span>
+            </div>
+
+            <div class="card-tap-hint absolute bottom-2.5 right-2.5 px-3 py-1 rounded-full bg-lavender-900/80 text-white text-[11px] font-display font-semibold backdrop-blur-sm">
+              Ketuk kartu 💬
+            </div>
+          </div>
+
+          <div class="card-caption hidden mt-3 pt-3 border-t border-lavender-300/70 text-center px-1">
+            <p class="card-title-display font-hand text-xl text-lavender-800 mb-1">“Terima Kasih Sudah Hadir 🌙”</p>
+            <p class="card-note-display text-xs sm:text-sm text-lavender-900 leading-relaxed">
+              Setiap obrolan random, ketawa bareng, sampai jalan-jalan sederhana sama kamu selalu jadi momen favorit yang ingin terus diulang lagi.
+            </p>
+          </div>
+
+          <!-- Edit Fields (Mode Edit Only) -->
+          <div class="card-edit-panel edit-only-control hidden flex-col gap-2 mt-3 pt-3 border-t border-lavender-300">
+            <label class="text-[11px] font-display font-bold text-lavender-900">Judul Kartu / Karakter:</label>
+            <input
+              type="text"
+              class="card-title-input w-full px-3 py-2 rounded-xl bg-white/95 border border-lavender-300 text-xs font-semibold text-lavender-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+              value="“Terima Kasih Sudah Hadir 🌙”"
+            />
+            <label class="text-[11px] font-display font-bold text-lavender-900">Catatan Manis:</label>
+            <textarea
+              rows="2"
+              class="card-note-input w-full px-3 py-2 rounded-xl bg-white/95 border border-lavender-300 text-xs text-lavender-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+            >Setiap obrolan random, ketawa bareng, sampai jalan-jalan sederhana sama kamu selalu jadi momen favorit yang ingin terus diulang lagi.</textarea>
+            <button
+              type="button"
+              class="save-card-btn self-end px-3.5 py-1.5 rounded-xl bg-lavender-800 hover:bg-lavender-600 text-white text-xs font-display font-bold shadow-sm transition cursor-pointer"
+            >
+              💾 Simpan Kartu
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- ======================================================================
+           STAGE 4: VISUAL NOVEL LETTER (SURAT SPESIAL TYPEWRITER)
+           ====================================================================== -->
+      <section id="letterSection" class="reveal-stage flex flex-col gap-3">
+        <div class="text-center">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lavender-100 border border-lavender-300/70 text-lavender-800 text-[11px] font-display font-bold mb-2">
+            <span>STAGE 03</span>
+            <span>•</span>
+            <span>SECRET DIALOGUE 💌</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-lavender-900">
+            Pesan Khusus Untukmu
+          </h3>
+        </div>
+
+        <!-- Visual Novel Dialogue Box Container -->
+        <div class="relative pt-4">
+          <!-- Character Nameplate Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-t-2xl rounded-br-2xl bg-gradient-to-r from-lavender-800 to-lavender-500 text-white font-display font-bold text-sm shadow-md ml-4 relative z-10">
+            <span class="text-starlight-100">✦</span>
+            <span>Almira 💜</span>
+          </div>
+
+          <!-- Frosted Visual Novel Text Box -->
+          <div class="glass-card rounded-3xl p-5 sm:p-6 -mt-2 relative border-2 border-lavender-300">
+            <div class="absolute top-3.5 right-4 text-starlight-500 text-xs select-none">✦ ✦ ✦</div>
+
+            <!-- Mode Almira Typewriter Reader -->
+            <div id="letterReaderBox" class="min-h-[210px] text-sm sm:text-[15px] text-lavender-900 leading-relaxed whitespace-pre-line font-medium pt-2">
+              <span id="typewriterText"></span><span id="typewriterCursor" class="cursor-blink"></span>
+            </div>
+
+            <!-- Mode Edit Letter Editor -->
+            <div id="letterEditorBox" class="edit-only-control hidden flex-col gap-2.5 pt-2">
+              <label for="letterInput" class="text-xs font-display font-bold text-lavender-900">
+                Edit Isi Surat Ulang Tahun (Otomatis Tersimpan ke Firebase):
+              </label>
+              <textarea
+                id="letterInput"
+                rows="8"
+                class="w-full p-3.5 rounded-2xl bg-white/95 border border-lavender-300 text-xs sm:text-sm text-lavender-900 leading-relaxed focus:outline-none focus:ring-2 focus:ring-lavender-500"
+              ></textarea>
+              <div class="flex justify-end">
+                <button
+                  id="saveLetterBtn"
+                  type="button"
+                  class="px-4 py-2 rounded-xl bg-lavender-800 hover:bg-lavender-600 text-white text-xs font-display font-bold shadow-sm transition cursor-pointer"
+                >
+                  💾 Simpan Surat ke Firebase
+                </button>
+              </div>
+            </div>
+
+            <!-- Visual Novel Bottom Controls -->
+            <div id="letterReaderControls" class="flex items-center justify-between gap-2 mt-5 pt-3 border-t border-lavender-300/60">
+              <button
+                id="replayTypewriterBtn"
+                type="button"
+                class="px-3 py-1.5 rounded-xl bg-lavender-100 hover:bg-lavender-200 text-lavender-800 text-xs font-display font-bold transition cursor-pointer"
+              >
+                ↺ Ulangi Ketikan
+              </button>
+
+              <button
+                id="skipTypewriterBtn"
+                type="button"
+                class="px-3.5 py-1.5 rounded-xl bg-lavender-800 hover:bg-lavender-600 text-white text-xs font-display font-bold shadow-sm transition cursor-pointer"
+              >
+                Tampilkan Semua ▼
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           STAGE 5: 4 INTERACTIVE GIFT COUPONS (KUPON HADIAH ULANG TAHUN)
+           ====================================================================== -->
+      <section id="voucherSection" class="reveal-stage flex flex-col gap-4">
+        <div class="text-center px-2">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lavender-100 border border-lavender-300/70 text-lavender-800 text-[11px] font-display font-bold mb-2">
+            <span>STAGE 04</span>
+            <span>•</span>
+            <span>BIRTHDAY REWARDS 🎁</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-lavender-900">
+            Kupon Hadiah Ulang Tahun
+          </h3>
+          <p class="text-xs sm:text-sm text-lavender-800/85 mt-1">
+            Sentuh kupon di bawah untuk mengklaim hadiahmu! Status klaim langsung tersimpan otomatis 💜
+          </p>
+        </div>
+
+        <!-- Inline Claim Instruction Toast Banner -->
+        <div
+          id="voucherToast"
+          class="hidden p-3.5 rounded-2xl bg-gradient-to-r from-lavender-800 via-lavender-500 to-lavender-800 text-white text-center text-xs sm:text-sm font-display font-bold shadow-lg transition-all"
+        >
+          🎉 Kupon berhasil diklaim &amp; tersimpan! Boleh banget di-screenshot juga ya 💜
+        </div>
+
+        <!-- Vouchers List -->
+        <div class="flex flex-col gap-3.5">
+          <!-- Voucher 1 -->
+          <button
+            type="button"
+            data-voucher-index="0"
+            class="voucher-ticket w-full text-left rounded-2xl p-4 pl-6 pr-5 shadow-sm hover:shadow-md active:scale-[0.99] flex items-center justify-between gap-3 cursor-pointer"
+          >
+            <div class="flex-1 pr-2 border-r border-dashed border-lavender-300">
+              <span class="text-[10px] uppercase tracking-wider font-bold text-lavender-600 block mb-0.5">
+                Birthday Pass #01
+              </span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-lavender-900">
+                🎟️ Traktir Makanan &amp; Minuman Favorit
+              </h4>
+              <p class="text-xs text-lavender-800/80 mt-0.5">
+                Bebas pilih menu makanan &amp; minuman apa aja yang lagi kamu pengen!
+              </p>
+            </div>
+            <div class="voucher-status shrink-0 w-24 text-center">
+              <span class="inline-block px-2.5 py-1 rounded-lg bg-lavender-100 border border-lavender-300 text-lavender-800 text-[11px] font-display font-bold">
+                Klaim Kupon
+              </span>
+            </div>
+          </button>
+
+          <!-- Voucher 2 -->
+          <button
+            type="button"
+            data-voucher-index="1"
+            class="voucher-ticket w-full text-left rounded-2xl p-4 pl-6 pr-5 shadow-sm hover:shadow-md active:scale-[0.99] flex items-center justify-between gap-3 cursor-pointer"
+          >
+            <div class="flex-1 pr-2 border-r border-dashed border-lavender-300">
+              <span class="text-[10px] uppercase tracking-wider font-bold text-lavender-600 block mb-0.5">
+                Birthday Pass #02
+              </span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-lavender-900">
+                🎟️ Bebas Pilih Tempat Jalan
+              </h4>
+              <p class="text-xs text-lavender-800/80 mt-0.5">
+                Kafe estetik, mall, atau spot foto seru—kamu yang tentuin tujuannya!
+              </p>
+            </div>
+            <div class="voucher-status shrink-0 w-24 text-center">
+              <span class="inline-block px-2.5 py-1 rounded-lg bg-lavender-100 border border-lavender-300 text-lavender-800 text-[11px] font-display font-bold">
+                Klaim Kupon
+              </span>
+            </div>
+          </button>
+
+          <!-- Voucher 3 -->
+          <button
+            type="button"
+            data-voucher-index="2"
+            class="voucher-ticket w-full text-left rounded-2xl p-4 pl-6 pr-5 shadow-sm hover:shadow-md active:scale-[0.99] flex items-center justify-between gap-3 cursor-pointer"
+          >
+            <div class="flex-1 pr-2 border-r border-dashed border-lavender-300">
+              <span class="text-[10px] uppercase tracking-wider font-bold text-lavender-600 block mb-0.5">
+                Birthday Pass #03
+              </span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-lavender-900">
+                🎟️ Temenin Event / Hunting Cosplay
+              </h4>
+              <p class="text-xs text-lavender-800/80 mt-0.5">
+                Siap jadi fotografer pribadi &amp; bantu bawain perlengkapan cosplay kamu!
+              </p>
+            </div>
+            <div class="voucher-status shrink-0 w-24 text-center">
+              <span class="inline-block px-2.5 py-1 rounded-lg bg-lavender-100 border border-lavender-300 text-lavender-800 text-[11px] font-display font-bold">
+                Klaim Kupon
+              </span>
+            </div>
+          </button>
+
+          <!-- Voucher 4 -->
+          <button
+            type="button"
+            data-voucher-index="3"
+            class="voucher-ticket w-full text-left rounded-2xl p-4 pl-6 pr-5 shadow-sm hover:shadow-md active:scale-[0.99] flex items-center justify-between gap-3 cursor-pointer"
+          >
+            <div class="flex-1 pr-2 border-r border-dashed border-lavender-300">
+              <span class="text-[10px] uppercase tracking-wider font-bold text-starlight-500 block mb-0.5">
+                Special Starlight Pass #04
+              </span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-lavender-900">
+                🎟️ Satu Permintaan Bebas
+              </h4>
+              <p class="text-xs text-lavender-800/80 mt-0.5">
+                Berlaku kapan saja untuk 1 permintaan spesial apa pun dari kamu!
+              </p>
+            </div>
+            <div class="voucher-status shrink-0 w-24 text-center">
+              <span class="inline-block px-2.5 py-1 rounded-lg bg-starlight-100 border border-starlight-400 text-lavender-900 text-[11px] font-display font-bold">
+                Klaim Kupon
+              </span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Mode Edit: Reset Claimed Vouchers Button -->
+        <div class="edit-only-control hidden justify-center mt-2">
+          <button
+            id="resetVouchersBtn"
+            type="button"
+            class="px-4 py-2 rounded-full bg-rose-100 hover:bg-rose-200 border border-rose-300 text-rose-900 font-display font-bold text-xs shadow-sm transition active:scale-95 cursor-pointer"
+          >
+            🔄 Reset Status Klaim Kupon
+          </button>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           FOOTER & EXTRA CELEBRATION TRIGGER
+           ====================================================================== -->
+      <footer class="reveal-stage text-center pt-4 pb-6">
+        <div class="glass-card rounded-3xl p-5">
+          <p class="font-display font-bold text-base text-lavender-900 mb-1">
+            Sekali lagi, Happy Birthday Almira! 💜
+          </p>
+          <p class="text-xs text-lavender-800/80 mb-4">
+            Dibuat khusus dengan sepenuh hati untuk Almira Adelia Risma Althofunnisa ✨
+          </p>
+          <button
+            id="moreConfettiBtn"
+            type="button"
+            class="px-5 py-2.5 rounded-full bg-lavender-100 hover:bg-lavender-200 border border-lavender-300 text-lavender-900 font-display font-bold text-xs transition active:scale-95 cursor-pointer"
+          >
+            🎉 Rayakan Lagi (Sebar Konfeti)
+          </button>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       FIREBASE FIRESTORE v11 & INTERACTIVE APP SCRIPT
+       ========================================================================== -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    /* ------------------------------------------------------------------------
+       0. EXACT FIREBASE CONFIGURATION & FIRESTORE SETUP
+       ------------------------------------------------------------------------ */
+    const firebaseConfig = {
+      apiKey: "AIzaSyDU41MYRlxjaS1UHKvenHPYkUJDRJQajvI",
+      authDomain: "hbd-almira.firebaseapp.com",
+      projectId: "hbd-almira",
+      storageBucket: "hbd-almira.firebasestorage.app",
+      messagingSenderId: "489803622305",
+      appId: "1:489803622305:web:4e4b248ff7de0017438de0",
+      measurementId: "G-3FSTC8D3E1"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    // Collection: 'birthday_gifts', Document: 'almira_adelia'
+    const giftDocRef = doc(db, "birthday_gifts", "almira_adelia");
+
+    const DEFAULT_LETTER = `Selamat ulang tahun, Almira Adelia Risma Althofunnisa! 💜
+
+Di hari yang spesial ini, aku cuma mau bilang terima kasih sudah menjadi sosok yang begitu ceria, hangat, dan selalu membawa warna indah di sekitarmu.
+
+Semoga di usia baru ini, kamu selalu diberi kesehatan, kebahagiaan yang melimpah, dan kelancaran di setiap langkah yang kamu ambil. Semoga semua wishlist—mulai dari impian-impian besar sampai rencana kostum cosplay favoritmu—bisa terwujud satu per satu! ✨
+
+Tetap jadi Almira yang manis, kreatif, dan selalu bikin bangga ya. Happy level up, Best Girl! 🌸🎂`;
+
+    // Check if URL has ?edit=1 to auto-enable Mode Edit
+    const urlParams = new URLSearchParams(window.location.search);
+    const startInEditMode = urlParams.get("edit") === "1";
+
+    const appState = {
+      isEditMode: startInEditMode,
+      cards: [
+        {
+          imageUrl: "",
+          title: "“Always Shining Bright 💜”",
+          note: "Buatku, kamu selalu jadi karakter utama paling bersinar. Senyum dan semangatmu selalu sukses bikin hari-hari terasa jauh lebih hangat!"
+        },
+        {
+          imageUrl: "",
+          title: "“Effort & Passion yang Keren Banget ✨”",
+          note: "Selalu kagum lihat totalitas dan kreativitasmu tiap kali cosplay! Karakter apa pun yang kamu perankan selalu kelihatan hidup dan memukau."
+        },
+        {
+          imageUrl: "",
+          title: "“Terima Kasih Sudah Hadir 🌙”",
+          note: "Setiap obrolan random, ketawa bareng, sampai jalan-jalan sederhana sama kamu selalu jadi momen favorit yang ingin terus diulang lagi."
+        }
+      ],
+      letter: DEFAULT_LETTER,
+      vouchers: [
+        { claimed: false, claimedAt: "" },
+        { claimed: false, claimedAt: "" },
+        { claimed: false, claimedAt: "" },
+        { claimed: false, claimedAt: "" }
+      ]
+    };
+
+    const syncStatusBadge = document.getElementById("syncStatusBadge");
+    const syncDot = document.getElementById("syncDot");
+    const syncText = document.getElementById("syncText");
+    const permissionAlertBox = document.getElementById("permissionAlertBox");
+
+    document.getElementById("closePermissionAlertBtn").addEventListener("click", () => {
+      permissionAlertBox.classList.add("hidden");
+    });
+
+    function setSyncStatus(state, message) {
+      if (state === "saving") {
+        syncDot.className = "w-2 h-2 rounded-full bg-starlight-500 animate-pulse";
+        syncText.textContent = message || "Menyimpan...";
+        if (appState.isEditMode) {
+          syncStatusBadge.classList.remove("hidden");
+          syncStatusBadge.classList.add("flex");
+        }
+      } else if (state === "saved") {
+        syncDot.className = "w-2 h-2 rounded-full bg-emerald-500";
+        syncText.textContent = message || "Tersimpan di Firebase ✓";
+        permissionAlertBox.classList.add("hidden");
+        if (appState.isEditMode) {
+          syncStatusBadge.classList.remove("hidden");
+          syncStatusBadge.classList.add("flex");
+        }
+      } else if (state === "permission-error") {
+        syncDot.className = "w-2 h-2 rounded-full bg-rose-500";
+        syncText.textContent = "Izin Firestore Ditolak!";
+        if (appState.isEditMode) {
+          syncStatusBadge.classList.remove("hidden");
+          syncStatusBadge.classList.add("flex");
+          permissionAlertBox.classList.remove("hidden");
+        }
+      } else if (state === "error") {
+        syncDot.className = "w-2 h-2 rounded-full bg-rose-500";
+        syncText.textContent = message || "Gagal sinkronisasi";
+        if (appState.isEditMode) {
+          syncStatusBadge.classList.remove("hidden");
+          syncStatusBadge.classList.add("flex");
+        }
+      }
+    }
+
+    // Save state using setDoc with { merge: true }
+    async function saveStateToFirebase() {
+      try {
+        setSyncStatus("saving", "Menyimpan...");
+        await setDoc(
+          giftDocRef,
+          {
+            cards: appState.cards,
+            letter: appState.letter,
+            vouchers: appState.vouchers,
+            updatedAt: new Date().toISOString()
+          },
+          { merge: true }
+        );
+        setSyncStatus("saved", "Tersimpan di Firebase ✓");
+      } catch (err) {
+        console.error("Firestore save error:", err);
+        if (err && (err.code === "permission-denied" || String(err.message).includes("permissions"))) {
+          setSyncStatus("permission-error");
+        } else {
+          setSyncStatus("error", "Gagal menyimpan ke cloud");
+        }
+      }
+    }
+
+    // Compress image via HTML5 Canvas (max width 720px, JPEG quality 0.78)
+    function compressImageToDataURL(file, maxWidth = 720, quality = 0.78) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onerror = () => reject(new Error("Gagal membaca file gambar"));
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onerror = () => reject(new Error("Format gambar tidak valid"));
+          img.onload = () => {
+            let targetWidth = img.width;
+            let targetHeight = img.height;
+
+            if (targetWidth > maxWidth) {
+              const ratio = maxWidth / targetWidth;
+              targetWidth = maxWidth;
+              targetHeight = Math.round(img.height * ratio);
+            }
+
+            const canvas = document.createElement("canvas");
+            canvas.width = targetWidth;
+            canvas.height = targetHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
+
+            let compressed = canvas.toDataURL("image/jpeg", quality);
+
+            // Second-pass fallback so 3 photos always fit well within Firestore 1MB document limit
+            if (compressed.length > 260000) {
+              const fallbackCanvas = document.createElement("canvas");
+              const fallbackRatio = 580 / targetWidth;
+              fallbackCanvas.width = 580;
+              fallbackCanvas.height = Math.round(targetHeight * fallbackRatio);
+              fallbackCanvas.getContext("2d").drawImage(img, 0, 0, fallbackCanvas.width, fallbackCanvas.height);
+              compressed = fallbackCanvas.toDataURL("image/jpeg", 0.7);
+            }
+
+            resolve(compressed);
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    /* ------------------------------------------------------------------------
+       1. WEB AUDIO API MUSIC BOX SYNTHESIZER ("HAPPY BIRTHDAY" + CHIMES)
+       ------------------------------------------------------------------------ */
+    class MusicBoxSynth {
+      constructor() {
+        this.ctx = null;
+        this.isPlaying = false;
+        this.timerId = null;
+        this.noteIndex = 0;
+
+        // "Happy Birthday to You" melody in F Major (frequency in Hz, duration in ms)
+        this.melody = [
+          { freq: 261.63, dur: 340 }, // C4 - Hap-
+          { freq: 261.63, dur: 180 }, // C4 - py
+          { freq: 293.66, dur: 520 }, // D4 - Birth-
+          { freq: 261.63, dur: 520 }, // C4 - day
+          { freq: 349.23, dur: 520 }, // F4 - to
+          { freq: 329.63, dur: 960 }, // E4 - you
+
+          { freq: 261.63, dur: 340 }, // C4 - Hap-
+          { freq: 261.63, dur: 180 }, // C4 - py
+          { freq: 293.66, dur: 520 }, // D4 - Birth-
+          { freq: 261.63, dur: 520 }, // C4 - day
+          { freq: 392.00, dur: 520 }, // G4 - to
+          { freq: 349.23, dur: 960 }, // F4 - you
+
+          { freq: 261.63, dur: 340 }, // C4 - Hap-
+          { freq: 261.63, dur: 180 }, // C4 - py
+          { freq: 523.25, dur: 520 }, // C5 - Birth-
+          { freq: 440.00, dur: 520 }, // A4 - day
+          { freq: 349.23, dur: 520 }, // F4 - dear
+          { freq: 329.63, dur: 520 }, // E4 - Al-
+          { freq: 293.66, dur: 960 }, // D4 - mi-ra
+
+          { freq: 466.16, dur: 340 }, // Bb4 - Hap-
+          { freq: 466.16, dur: 180 }, // Bb4 - py
+          { freq: 440.00, dur: 520 }, // A4 - Birth-
+          { freq: 349.23, dur: 520 }, // F4 - day
+          { freq: 392.00, dur: 520 }, // G4 - to
+          { freq: 349.23, dur: 1200 } // F4 - you
+        ];
+      }
+
+      ensureContext() {
+        if (!this.ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioCtx();
+        }
+        if (this.ctx.state === "suspended") {
+          this.ctx.resume();
+        }
+      }
+
+      playTone(freq, durationMs, volume = 0.14) {
+        if (!this.ctx) return;
+        const now = this.ctx.currentTime;
+        const durSec = durationMs / 1000;
+
+        const osc = this.ctx.createOscillator();
+        const overtone = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        const overtoneGain = this.ctx.createGain();
+
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+
+        // Music-box bell harmonic
+        overtone.type = "triangle";
+        overtone.frequency.setValueAtTime(freq * 2, now);
+
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(volume, now + 0.025);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + durSec + 0.45);
+
+        overtoneGain.gain.setValueAtTime(0.0001, now);
+        overtoneGain.gain.exponentialRampToValueAtTime(volume * 0.22, now + 0.015);
+        overtoneGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.25);
+
+        osc.connect(gain);
+        overtone.connect(overtoneGain);
+        gain.connect(this.ctx.destination);
+        overtoneGain.connect(this.ctx.destination);
+
+        osc.start(now);
+        overtone.start(now);
+        osc.stop(now + durSec + 0.5);
+        overtone.stop(now + 0.3);
+      }
+
+      playSparkleChime() {
+        try {
+          this.ensureContext();
+          const notes = [587.33, 783.99, 1046.5];
+          notes.forEach((n, i) => {
+            setTimeout(() => this.playTone(n, 260, 0.09), i * 65);
+          });
+        } catch (e) {
+          // Ignore audio block if browser restricts before gesture
+        }
+      }
+
+      scheduleNextNote() {
+        if (!this.isPlaying) return;
+        const note = this.melody[this.noteIndex];
+        this.playTone(note.freq, note.dur, 0.13);
+        this.noteIndex = (this.noteIndex + 1) % this.melody.length;
+
+        this.timerId = setTimeout(() => {
+          this.scheduleNextNote();
+        }, note.dur + 55);
+      }
+
+      start() {
+        try {
+          this.ensureContext();
+          if (this.isPlaying) return;
+          this.isPlaying = true;
+          this.updateAudioToggleUI();
+          this.scheduleNextNote();
+        } catch (e) {
+          console.warn("Audio start deferred:", e);
+        }
+      }
+
+      stop() {
+        this.isPlaying = false;
+        clearTimeout(this.timerId);
+        this.updateAudioToggleUI();
+      }
+
+      toggle() {
+        if (this.isPlaying) {
+          this.stop();
+        } else {
+          this.start();
+        }
+      }
+
+      updateAudioToggleUI() {
+        const audioIcon = document.getElementById("audioIcon");
+        const audioLabel = document.getElementById("audioLabel");
+        if (this.isPlaying) {
+          audioIcon.textContent = "🎵";
+          audioLabel.textContent = "Music: On";
+        } else {
+          audioIcon.textContent = "🔇";
+          audioLabel.textContent = "Music: Off";
+        }
+      }
+    }
+
+    const musicBox = new MusicBoxSynth();
+    document.getElementById("audioToggleBtn").addEventListener("click", () => {
+      musicBox.toggle();
+    });
+
+    /* ------------------------------------------------------------------------
+       2. SHOUJO STARLIGHT & SAKURA PARTICLE + CONFETTI CANVAS ENGINE
+       ------------------------------------------------------------------------ */
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+
+    const sakuraColors = ["#f9a8d4", "#f472b6", "#e9d5ff", "#d8b4fe"];
+    const starColors = ["#f59e0b", "#fbbf24", "#fef3c7", "#a855f7"];
+    const confettiColors = ["#a855f7", "#d8b4fe", "#f59e0b", "#fbbf24", "#f472b6", "#6b21a8"];
+
+    const ambientParticles = [];
+    const burstConfetti = [];
+    const shootingStars = [];
+
+    // Populate initial sakura petals & twinkling stars
+    const initialCount = Math.min(34, Math.floor(width / 13));
+    for (let i = 0; i < initialCount; i++) {
+      const isStar = i % 2 === 0;
+      ambientParticles.push({
+        type: isStar ? "star" : "sakura",
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: isStar ? 2.5 + Math.random() * 3 : 4 + Math.random() * 4,
+        speedY: isStar ? 0.12 + Math.random() * 0.25 : 0.45 + Math.random() * 0.75,
+        speedX: isStar ? (Math.random() - 0.5) * 0.15 : (Math.random() - 0.5) * 0.65,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.03,
+        twinklePhase: Math.random() * Math.PI * 2,
+        alpha: 0.45 + Math.random() * 0.45,
+        color: isStar
+          ? starColors[Math.floor(Math.random() * starColors.length)]
+          : sakuraColors[Math.floor(Math.random() * sakuraColors.length)]
+      });
+    }
+
+    function spawnShootingStar() {
+      shootingStars.push({
+        x: Math.random() * width * 0.85,
+        y: Math.random() * height * 0.35,
+        vx: 7 + Math.random() * 5,
+        vy: 3.5 + Math.random() * 2.5,
+        length: 55 + Math.random() * 45,
+        alpha: 1
+      });
+    }
+
+    // Trigger occasional shooting star every few seconds
+    setInterval(() => {
+      if (shootingStars.length < 2) {
+        spawnShootingStar();
+      }
+    }, 4200);
+
+    function fireConfettiBurst(originX, originY, count = 80) {
+      for (let i = 0; i < count; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 3 + Math.random() * 8.5;
+        burstConfetti.push({
+          x: originX,
+          y: originY,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - 3.2,
+          gravity: 0.21,
+          drag: 0.96,
+          size: 5 + Math.random() * 5,
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 14,
+          alpha: 1,
+          shape: Math.random() > 0.45 ? "star" : "rect",
+          color: confettiColors[Math.floor(Math.random() * confettiColors.length)]
+        });
+      }
+    }
+
+    function drawStar(c, x, y, radius, color, alpha, rotation = 0) {
+      c.save();
+      c.translate(x, y);
+      c.rotate(rotation);
+      c.globalAlpha = Math.max(0, Math.min(1, alpha));
+      c.fillStyle = color;
+      c.beginPath();
+      for (let i = 0; i < 4; i++) {
+        const a = (i * Math.PI) / 2;
+        c.lineTo(Math.cos(a) * radius * 1.45, Math.sin(a) * radius * 1.45);
+        const b = a + Math.PI / 4;
+        c.lineTo(Math.cos(b) * radius * 0.42, Math.sin(b) * radius * 0.42);
+      }
+      c.closePath();
+      c.fill();
+      c.restore();
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+
+      // 1. Ambient Sakura Petals & Twinkling Stars
+      ambientParticles.forEach((p) => {
+        p.y += p.speedY;
+        p.x += p.speedX + Math.sin(p.angle) * 0.25;
+        p.angle += p.spin;
+        p.twinklePhase += 0.04;
+
+        if (p.y > height + 12) {
+          p.y = -12;
+          p.x = Math.random() * width;
+        }
+        if (p.x > width + 12) p.x = -12;
+        if (p.x < -12) p.x = width + 12;
+
+        if (p.type === "star") {
+          const twinkleAlpha = p.alpha * (0.65 + 0.35 * Math.sin(p.twinklePhase));
+          drawStar(ctx, p.x, p.y, p.size, p.color, twinkleAlpha, p.angle);
+        } else {
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.angle);
+          ctx.globalAlpha = p.alpha;
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.size * 1.35, p.size * 0.72, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      });
+
+      // 2. Occasional Shooting Stars
+      for (let i = shootingStars.length - 1; i >= 0; i--) {
+        const s = shootingStars[i];
+        s.x += s.vx;
+        s.y += s.vy;
+        s.alpha -= 0.018;
+
+        if (s.alpha <= 0 || s.x > width + 100 || s.y > height + 100) {
+          shootingStars.splice(i, 1);
+          continue;
+        }
+
+        ctx.save();
+        ctx.globalAlpha = s.alpha;
+        const grad = ctx.createLinearGradient(s.x, s.y, s.x - s.vx * 6, s.y - s.vy * 6);
+        grad.addColorStop(0, "#fef3c7");
+        grad.addColorStop(0.4, "#fbbf24");
+        grad.addColorStop(1, "rgba(216, 180, 254, 0)");
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 2.4;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(s.x, s.y);
+        ctx.lineTo(s.x - s.vx * 6, s.y - s.vy * 6);
+        ctx.stroke();
+        drawStar(ctx, s.x, s.y, 4, "#fef3c7", s.alpha, 0);
+        ctx.restore();
+      }
+
+      // 3. Burst Confetti
+      for (let i = burstConfetti.length - 1; i >= 0; i--) {
+        const c = burstConfetti[i];
+        c.vx *= c.drag;
+        c.vy = c.vy * c.drag + c.gravity;
+        c.x += c.vx;
+        c.y += c.vy;
+        c.rotation += c.rotationSpeed;
+        c.alpha -= 0.011;
+
+        if (c.alpha <= 0 || c.y > height + 30) {
+          burstConfetti.splice(i, 1);
+          continue;
+        }
+
+        if (c.shape === "star") {
+          drawStar(ctx, c.x, c.y, c.size * 0.72, c.color, c.alpha, (c.rotation * Math.PI) / 180);
+        } else {
+          ctx.save();
+          ctx.translate(c.x, c.y);
+          ctx.rotate((c.rotation * Math.PI) / 180);
+          ctx.globalAlpha = c.alpha;
+          ctx.fillStyle = c.color;
+          ctx.fillRect(-c.size / 2, -c.size / 3, c.size, c.size * 0.65);
+          ctx.restore();
+        }
+      }
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    /* ------------------------------------------------------------------------
+       3. STAGE 1: WELCOME GATE LOGIC
+       ------------------------------------------------------------------------ */
+    const openingGate = document.getElementById("openingGate");
+    const openGiftBtn = document.getElementById("openGiftBtn");
+    const mainJourney = document.getElementById("mainJourney");
+
+    function unlockBirthdayJourney() {
+      musicBox.start();
+      fireConfettiBurst(width / 2, height * 0.45, 115);
+      spawnShootingStar();
+
+      openingGate.style.opacity = "0";
+      openingGate.style.transform = "scale(0.95) translateY(-12px)";
+
+      setTimeout(() => {
+        openingGate.classList.add("hidden");
+        mainJourney.classList.remove("hidden");
+        mainJourney.classList.add("flex");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        revealOnScroll();
+      }, 450);
+    }
+
+    openGiftBtn.addEventListener("click", unlockBirthdayJourney);
+
+    // If opened directly with ?edit=1, skip gate automatically so editing is immediate
+    if (startInEditMode) {
+      openingGate.classList.add("hidden");
+      mainJourney.classList.remove("hidden");
+      mainJourney.classList.add("flex");
+    }
+
+    /* ------------------------------------------------------------------------
+       4. SCROLL REVEAL OBSERVER FOR SECTIONS
+       ------------------------------------------------------------------------ */
+    const revealStages = document.querySelectorAll(".reveal-stage");
+    function revealOnScroll() {
+      const triggerBottom = window.innerHeight * 0.9;
+      revealStages.forEach((stage) => {
+        const top = stage.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          stage.classList.add("visible");
+        }
+      });
+    }
+    window.addEventListener("scroll", revealOnScroll, { passive: true });
+
+    /* ------------------------------------------------------------------------
+       5. STAGE 2: INTERACTIVE BIRTHDAY CAKE (BLOW CANDLE)
+       ------------------------------------------------------------------------ */
+    const cakeContainer = document.getElementById("cakeContainer");
+    const candleFlamesGroup = document.getElementById("candleFlamesGroup");
+    const candleSmokeGroup = document.getElementById("candleSmokeGroup");
+    const tapCandleBadge = document.getElementById("tapCandleBadge");
+    const wishGrantedBox = document.getElementById("wishGrantedBox");
+    let candlesBlown = false;
+
+    function blowCandles() {
+      if (candlesBlown) return;
+      candlesBlown = true;
+
+      candleFlamesGroup.classList.add("hidden");
+      candleSmokeGroup.classList.remove("hidden");
+      tapCandleBadge.classList.add("hidden");
+      wishGrantedBox.classList.remove("hidden");
+
+      musicBox.playSparkleChime();
+      const rect = cakeContainer.getBoundingClientRect();
+      fireConfettiBurst(rect.left + rect.width / 2, rect.top + rect.height / 3, 85);
+    }
+
+    cakeContainer.addEventListener("click", blowCandles);
+    cakeContainer.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        blowCandles();
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       6. STAGE 3: COLLECTIBLE ANIME CARDS & CANVAS COMPRESSED PHOTO UPLOAD
+       ------------------------------------------------------------------------ */
+    const memoryCards = document.querySelectorAll(".memory-card");
+
+    function renderCardsUI() {
+      memoryCards.forEach((card, idx) => {
+        const data = appState.cards[idx];
+        if (!data) return;
+
+        const customImg = card.querySelector(".card-custom-img");
+        const defaultArt = card.querySelector(".card-default-art");
+        const titleDisplay = card.querySelector(".card-title-display");
+        const noteDisplay = card.querySelector(".card-note-display");
+        const titleInput = card.querySelector(".card-title-input");
+        const noteInput = card.querySelector(".card-note-input");
+
+        if (data.imageUrl) {
+          customImg.src = data.imageUrl;
+          customImg.classList.remove("hidden");
+          defaultArt.classList.add("hidden");
+        } else {
+          customImg.classList.add("hidden");
+          defaultArt.classList.remove("hidden");
+        }
+
+        titleDisplay.textContent = data.title;
+        noteDisplay.textContent = data.note;
+
+        if (document.activeElement !== titleInput) {
+          titleInput.value = data.title;
+        }
+        if (document.activeElement !== noteInput) {
+          noteInput.value = data.note;
+        }
+      });
+    }
+
+    memoryCards.forEach((card, idx) => {
+      const caption = card.querySelector(".card-caption");
+      const tapHint = card.querySelector(".card-tap-hint");
+      const photoInput = card.querySelector(".card-photo-input");
+      const uploadLabel = card.querySelector(".photo-upload-label");
+      const editPanel = card.querySelector(".card-edit-panel");
+      const titleInput = card.querySelector(".card-title-input");
+      const noteInput = card.querySelector(".card-note-input");
+      const saveCardBtn = card.querySelector(".save-card-btn");
+
+      uploadLabel.addEventListener("click", (e) => e.stopPropagation());
+      editPanel.addEventListener("click", (e) => e.stopPropagation());
+
+      // Compress image (max width 720px, JPEG quality 0.78) & save to Firestore
+      photoInput.addEventListener("change", async (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        try {
+          setSyncStatus("saving", "Mengompres & menyimpan foto...");
+          const compressedDataUrl = await compressImageToDataURL(file, 720, 0.78);
+          appState.cards[idx].imageUrl = compressedDataUrl;
+          renderCardsUI();
+          musicBox.playSparkleChime();
+          await saveStateToFirebase();
+        } catch (err) {
+          console.error("Error memproses foto:", err);
+          setSyncStatus("error", "Gagal memproses foto");
+        }
+      });
+
+      // Save edited card title & caption
+      saveCardBtn.addEventListener("click", async () => {
+        appState.cards[idx].title = titleInput.value.trim() || appState.cards[idx].title;
+        appState.cards[idx].note = noteInput.value.trim() || appState.cards[idx].note;
+        renderCardsUI();
+        musicBox.playSparkleChime();
+        await saveStateToFirebase();
+      });
+
+      // Tap card to toggle holographic shimmer & reveal sweet caption
+      card.addEventListener("click", () => {
+        const isHidden = caption.classList.contains("hidden");
+        card.classList.toggle("card-active");
+
+        if (isHidden) {
+          caption.classList.remove("hidden");
+          tapHint.textContent = "Tutup pesan ▲";
+          musicBox.playSparkleChime();
+        } else {
+          caption.classList.add("hidden");
+          tapHint.textContent = "Ketuk kartu 💬";
+        }
+      });
+    });
+
+    /* ------------------------------------------------------------------------
+       7. STAGE 4: VISUAL NOVEL LETTER (TYPEWRITER + FIRESTORE EDITOR)
+       ------------------------------------------------------------------------ */
+    const typewriterTextEl = document.getElementById("typewriterText");
+    const typewriterCursorEl = document.getElementById("typewriterCursor");
+    const skipTypewriterBtn = document.getElementById("skipTypewriterBtn");
+    const replayTypewriterBtn = document.getElementById("replayTypewriterBtn");
+    const letterSection = document.getElementById("letterSection");
+    const letterInput = document.getElementById("letterInput");
+    const saveLetterBtn = document.getElementById("saveLetterBtn");
+
+    let charIndex = 0;
+    let typewriterInterval = null;
+    let hasStartedTypewriter = false;
+
+    function startTypewriter() {
+      clearInterval(typewriterInterval);
+      const textToType = appState.letter;
+      charIndex = 0;
+      typewriterTextEl.textContent = "";
+      typewriterCursorEl.classList.remove("hidden");
+      skipTypewriterBtn.classList.remove("hidden");
+
+      typewriterInterval = setInterval(() => {
+        if (charIndex < textToType.length) {
+          typewriterTextEl.textContent += textToType.charAt(charIndex);
+          charIndex++;
+        } else {
+          finishTypewriter();
+        }
+      }, 30);
+    }
+
+    function finishTypewriter() {
+      clearInterval(typewriterInterval);
+      typewriterTextEl.textContent = appState.letter;
+      typewriterCursorEl.classList.add("hidden");
+      skipTypewriterBtn.classList.add("hidden");
+    }
+
+    skipTypewriterBtn.addEventListener("click", () => {
+      finishTypewriter();
+      musicBox.playSparkleChime();
+    });
+
+    replayTypewriterBtn.addEventListener("click", () => {
+      startTypewriter();
+    });
+
+    saveLetterBtn.addEventListener("click", async () => {
+      const updatedText = letterInput.value.trim();
+      if (!updatedText) return;
+      appState.letter = updatedText;
+      finishTypewriter();
+      musicBox.playSparkleChime();
+      await saveStateToFirebase();
+    });
+
+    const letterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasStartedTypewriter) {
+            hasStartedTypewriter = true;
+            startTypewriter();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    letterObserver.observe(letterSection);
+
+    /* ------------------------------------------------------------------------
+       8. STAGE 5: 4 INTERACTIVE GIFT COUPONS (PERSISTENT FIRESTORE CLAIMS)
+       ------------------------------------------------------------------------ */
+    const voucherTickets = document.querySelectorAll(".voucher-ticket");
+    const voucherToast = document.getElementById("voucherToast");
+    const resetVouchersBtn = document.getElementById("resetVouchersBtn");
+
+    function formatClaimTimestamp() {
+      const now = new Date();
+      return now.toLocaleString("id-ID", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function renderVouchersUI() {
+      let anyClaimed = false;
+      voucherTickets.forEach((ticket, idx) => {
+        const vState = appState.vouchers[idx] || { claimed: false, claimedAt: "" };
+        const statusContainer = ticket.querySelector(".voucher-status");
+
+        if (vState.claimed) {
+          anyClaimed = true;
+          ticket.classList.add("ring-2", "ring-lavender-500", "bg-lavender-50");
+          statusContainer.innerHTML = `
+            <div class="flex flex-col items-center gap-0.5">
+              <span class="stamp-badge inline-block px-2 py-0.5 rounded-lg border-2 border-lavender-800 bg-starlight-100 text-lavender-900 text-[10px] font-display font-bold tracking-wide shadow-sm">
+                DIKLAIM ✓
+              </span>
+              <span class="text-[9px] font-semibold text-lavender-800 leading-tight">
+                ${vState.claimedAt || ""}
+              </span>
+            </div>
+          `;
+        } else {
+          ticket.classList.remove("ring-2", "ring-lavender-500", "bg-lavender-50");
+          const isSpecial = idx === 3;
+          statusContainer.innerHTML = `
+            <span class="inline-block px-2.5 py-1 rounded-lg ${isSpecial ? "bg-starlight-100 border border-starlight-400 text-lavender-900" : "bg-lavender-100 border border-lavender-300 text-lavender-800"} text-[11px] font-display font-bold">
+              Klaim Kupon
+            </span>
+          `;
+        }
+      });
+
+      if (anyClaimed) {
+        voucherToast.classList.remove("hidden");
+      } else {
+        voucherToast.classList.add("hidden");
+      }
+    }
+
+    voucherTickets.forEach((ticket, idx) => {
+      ticket.addEventListener("click", async () => {
+        if (appState.vouchers[idx].claimed) return;
+
+        appState.vouchers[idx] = {
+          claimed: true,
+          claimedAt: formatClaimTimestamp()
+        };
+        renderVouchersUI();
+        musicBox.playSparkleChime();
+
+        const rect = ticket.getBoundingClientRect();
+        fireConfettiBurst(rect.left + rect.width * 0.8, rect.top + rect.height / 2, 40);
+
+        await saveStateToFirebase();
+      });
+    });
+
+    resetVouchersBtn.addEventListener("click", async () => {
+      appState.vouchers = appState.vouchers.map(() => ({ claimed: false, claimedAt: "" }));
+      renderVouchersUI();
+      musicBox.playSparkleChime();
+      await saveStateToFirebase();
+    });
+
+    /* ------------------------------------------------------------------------
+       9. MODE EDIT / MODE ALMIRA TOGGLE & REAL-TIME FIRESTORE LISTENER
+       ------------------------------------------------------------------------ */
+    const modeToggleBtn = document.getElementById("modeToggleBtn");
+    const modeIcon = document.getElementById("modeIcon");
+    const modeLabel = document.getElementById("modeLabel");
+    const editOnlyControls = document.querySelectorAll(".edit-only-control");
+    const letterReaderBox = document.getElementById("letterReaderBox");
+    const letterReaderControls = document.getElementById("letterReaderControls");
+    const gallerySubtitle = document.getElementById("gallerySubtitle");
+
+    function applyModeUI() {
+      if (appState.isEditMode) {
+        modeIcon.textContent = "⚙️";
+        modeLabel.textContent = "Mode Edit";
+        modeToggleBtn.classList.add("ring-2", "ring-lavender-500", "bg-white");
+        syncStatusBadge.classList.remove("hidden");
+        syncStatusBadge.classList.add("flex");
+
+        editOnlyControls.forEach((el) => {
+          el.classList.remove("hidden");
+          if (el.classList.contains("card-edit-panel") || el.id === "letterEditorBox") {
+            el.classList.add("flex");
+          }
+        });
+
+        letterReaderBox.classList.add("hidden");
+        letterReaderControls.classList.add("hidden");
+        gallerySubtitle.textContent = "Mode Edit Aktif: Ganti foto, judul & catatan kartu lalu klik Simpan 💾";
+      } else {
+        modeIcon.textContent = "🎁";
+        modeLabel.textContent = "Mode Almira";
+        modeToggleBtn.classList.remove("ring-2", "ring-lavender-500", "bg-white");
+        syncStatusBadge.classList.add("hidden");
+        syncStatusBadge.classList.remove("flex");
+        permissionAlertBox.classList.add("hidden");
+
+        editOnlyControls.forEach((el) => {
+          el.classList.add("hidden");
+          el.classList.remove("flex");
+        });
+
+        letterReaderBox.classList.remove("hidden");
+        letterReaderControls.classList.remove("hidden");
+        gallerySubtitle.textContent = "Sentuh tiap kartu untuk membuka pesan rahasianya 💜";
+      }
+    }
+
+    function renderAllDynamicContent() {
+      renderCardsUI();
+      if (document.activeElement !== letterInput) {
+        letterInput.value = appState.letter;
+      }
+      if (hasStartedTypewriter) {
+        finishTypewriter();
+      }
+      renderVouchersUI();
+    }
+
+    modeToggleBtn.addEventListener("click", () => {
+      appState.isEditMode = !appState.isEditMode;
+      if (appState.isEditMode) {
+        letterInput.value = appState.letter;
+        // Reveal journey immediately if toggled while still on welcome gate
+        if (!openingGate.classList.contains("hidden")) {
+          openingGate.classList.add("hidden");
+          mainJourney.classList.remove("hidden");
+          mainJourney.classList.add("flex");
+          revealOnScroll();
+        }
+      } else if (hasStartedTypewriter) {
+        finishTypewriter();
+      }
+      applyModeUI();
+      musicBox.playSparkleChime();
+    });
+
+    // Real-time Firestore listener (collection 'birthday_gifts', document 'almira_adelia')
+    onSnapshot(
+      giftDocRef,
+      (snapshot) => {
+        if (snapshot.exists()) {
+          const data = snapshot.data();
+          if (Array.isArray(data.cards)) {
+            data.cards.forEach((c, idx) => {
+              if (appState.cards[idx]) {
+                appState.cards[idx] = {
+                  imageUrl: c.imageUrl || "",
+                  title: c.title || appState.cards[idx].title,
+                  note: c.note || appState.cards[idx].note
+                };
+              }
+            });
+          }
+          if (typeof data.letter === "string" && data.letter.trim()) {
+            appState.letter = data.letter;
+          }
+          if (Array.isArray(data.vouchers)) {
+            data.vouchers.forEach((v, idx) => {
+              if (appState.vouchers[idx]) {
+                appState.vouchers[idx] = {
+                  claimed: Boolean(v.claimed),
+                  claimedAt: v.claimedAt || ""
+                };
+              }
+            });
+          }
+          renderAllDynamicContent();
+          setSyncStatus("saved", "Tersimpan di Firebase ✓");
+        }
+      },
+      (error) => {
+        console.error("Firestore onSnapshot error:", error);
+        if (error && (error.code === "permission-denied" || String(error.message).includes("permissions"))) {
+          setSyncStatus("permission-error");
+        } else {
+          setSyncStatus("error", "Gagal memuat data cloud");
+        }
+      }
+    );
+
+    /* ------------------------------------------------------------------------
+       10. EXTRA CELEBRATION BUTTON & WINDOW ONLOAD INITIALIZATION
+       ------------------------------------------------------------------------ */
+    document.getElementById("moreConfettiBtn").addEventListener("click", () => {
+      musicBox.playSparkleChime();
+      fireConfettiBurst(width / 2, height * 0.5, 100);
+      spawnShootingStar();
+    });
+
+    window.addEventListener("load", () => {
+      applyModeUI();
+      renderAllDynamicContent();
+      revealOnScroll();
+      animateParticles();
+    });
+  </script>
+</body>
+</html>
